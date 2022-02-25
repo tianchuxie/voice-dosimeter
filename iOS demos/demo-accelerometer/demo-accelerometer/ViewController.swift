@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         moveMan.startAccelerometerUpdates()
         moveMan.accelerometerUpdateInterval = 1
         
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true){ _ in
+        Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true){ _ in
             if let data = self.moveMan.accelerometerData{
                 self.label.text = String(data.acceleration.x)
                 self.label_y.text = String(data.acceleration.y)
